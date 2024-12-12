@@ -1,0 +1,17 @@
+_target_: src.data.politifiact_datamodule.PolitifactDataModule
+data_dir: "./data/after_deal_data/phase_3/politifact.csv"
+
+batch_size: 8
+train_val_test_split: [340, 50, 94]
+# train_val_test_split: [8267, 1033, 1033]
+# train_val_test_split: [3870, 552, 1104]
+# train_val_test_split: [5426, 100, 10333]
+# train_val_test_split: [4415, 630, 1260]
+# train_val_test_split: [5008, 742, 1484]
+# train_val_test_split: [3066, 437, 874]
+
+num_workers: 0
+pin_memory: False
+num_classes: 2
+image_path: "./data/FakeNewsNet_Dataset/images/politifact_images/"
+propagation_path: "./data/after_deal_data/diffusion_eval_data/output_network/politifact_pkl/"

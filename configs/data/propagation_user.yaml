@@ -1,0 +1,16 @@
+_target_: src.data.propagation_user_datamodule.DiffusionDataModule
+data_dir: "./data/politifact/politifact_user_id_train.csv"
+batch_size: 16
+# train_val_test_split: [9255, 3085, 3085]
+
+# pol 7793
+# train_val_test_split: [5456, 779, 1558]
+
+# gos 197679
+# train_val_test_split: [138378, 19767, 39534]
+
+# pheme 73308
+train_val_test_split: [51318, 7330, 14660]
+num_workers: 0
+pin_memory: False
+num_classes: 2

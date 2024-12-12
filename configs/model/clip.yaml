@@ -1,0 +1,23 @@
+_target_: src.models.clip_module.ClipModule
+num_classes: 2
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 0.001
+  weight_decay: 0.0
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+  _partial_: true
+  mode: min
+  factor: 0.1
+  patience: 10
+
+net:
+  _target_: src.models.components.CLIP.CLIPModel
+  #classifier: src.models.components.CLIP.classifier
+  #bert_weighted_path: "/data1/zzy/FakeNewsCode/fake-news-baselines/src/models/components/bert_base_uncased_model.pth"
+  #tokenizer: "/data1/zzy/FakeNewsCode/fake-news-baselines/src/models/components/bert_tokenizer"
+# classifier:
+#   input_size: 768
+#   num_classes: 2
